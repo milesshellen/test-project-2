@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ open: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miles Shellen | Creative Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 border-b border-neutral-800">
+    <div class="flex items-center gap-6">
+      <h1 class="text-xl font-semibold tracking-tight">Miles Shellen</h1>
+      <nav class="hidden md:flex gap-6 text-sm text-neutral-400">
+        <a href="index.html" class="hover:text-neutral-100">Home</a>
+        <a href="work.html" class="hover:text-neutral-100">Work</a>
+      </nav>
+    </div>
+    <button @click="open = !open" class="md:hidden text-neutral-400 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav x-show="open" x-transition class="md:hidden flex flex-col items-center py-4 space-y-3 bg-neutral-900">
+    <a href="index.html" class="hover:text-white">Home</a>
+    <a href="work.html" class="hover:text-white">Work</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="flex flex-col items-center justify-center text-center py-28 px-6">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Creative Designer & Storyteller</h2>
+    <p class="max-w-xl text-neutral-400 mb-8">
+      I'm a graphic designer, video producer, and automotive enthusiast currently studying advertising at the University of Oregon. 
+      I bring ideas to life through design, motion, and storytelling.
+    </p>
+    <a href="work.html"
+       class="bg-neutral-100 text-neutral-950 px-6 py-3 rounded-full font-medium hover:bg-neutral-300 transition">
+      View My Work
+    </a>
+  </section>
+
+   <!-- Hero / About Section -->
+<section class="py-16 px-6 max-w-4xl mx-auto text-center">
+  <!-- Updated Larger Image -->
+  <div class="flex justify-center mb-10">
+    <img 
+      src="images/miles1.jpg" 
+      alt="Miles Shellen" 
+      class="rounded-2xl shadow-xl w-[36rem] max-w-full h-auto object-cover"
+    >
+  </div>
+
+  <h2 class="text-4xl font-semibold mb-4">About Me</h2>
+  <p class="text-neutral-300 leading-relaxed">
+    I’m Miles Shellen — a graphic designer, video producer, and marketing manager with a passion 
+    for creativity, storytelling, and design that connects. I currently manage creative direction 
+    and marketing for KWVA 88.1, the University of Oregon’s campus radio station, while studying 
+    advertising and exploring new opportunities that blend visual design, branding, and strategy. 
+    My work spans everything from social media design and merch creation to video production and 
+    brand storytelling.
+  </p>
+</section>
+
+  <!-- Experience -->
+  <section id="experience" class="px-6 md:px-20 py-20">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-8 text-center">Experience</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-neutral-900 p-6 rounded-2xl hover:-translate-y-1 transition">
+          <h4 class="font-semibold text-lg mb-2">KWVA Marketing</h4>
+          <p class="text-neutral-400 text-sm">
+            Social media and visual campaigns for KWVA 88.1 — blending bold color, motion, and youth culture.
+          </p>
+        </div>
+        <div class="bg-neutral-900 p-6 rounded-2xl hover:-translate-y-1 transition">
+          <h4 class="font-semibold text-lg mb-2">Video Production</h4>
+          <p class="text-neutral-400 text-sm">
+            Over 7 years of editing experience using Premiere Pro & After Effects — from storytelling to branded visuals.
+          </p>
+        </div>
+        <div class="bg-neutral-900 p-6 rounded-2xl hover:-translate-y-1 transition">
+          <h4 class="font-semibold text-lg mb-2">Automotive Design</h4>
+          <p class="text-neutral-400 text-sm">
+            Visual work inspired by classic European cars and design culture — merging form, function, and emotion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section class="py-20 px-6 text-center bg-neutral-900">
+  <h2 class="text-3xl font-semibold mb-6">Get in Touch</h2>
+  <p class="text-neutral-400 mb-8 max-w-xl mx-auto">
+    I’m always open to creative collaborations, design opportunities, or just talking cars and design.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-4">
+    <!-- Email Button -->
+    <a href="mailto:milesshellen@gmail.com" 
+       class="bg-amber-400 text-black font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-neutral-700 transition">
+      Email Me
+    </a>
+
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/milesshellen" target="_blank" 
+       class="bg-neutral-800 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-neutral-700 transition">
+      Instagram
+    </a>
+
+    <!-- LinkedIn Button -->
+    <a href="https://www.linkedin.com/in/milesshellen" target="_blank" 
+       class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-neutral-700 transition">
+      LinkedIn
+    </a>
+  </div>
+</section>
+
+
+  <footer class="text-center text-neutral-600 text-sm py-6 border-t border-neutral-800">
+    © 2025 Miles Shellen
+  </footer>
+
+</body>
+</html>
